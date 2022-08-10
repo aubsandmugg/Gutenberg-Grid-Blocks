@@ -3,6 +3,37 @@
 // # Shared
 // -----------------------------------------------------------------------------
 
+
+// 1. wp no longer sets box-sizing to border-box, so we need to set it
+.components-modal__frame *, 
+.components-modal__frame :after, 
+.components-modal__frame :before, 
+.components-popover *, 
+.components-popover :after, 
+.components-popover :before, 
+.edit-post-editor__inserter-panel *, 
+.edit-post-editor__inserter-panel :after, 
+.edit-post-editor__inserter-panel :before, 
+.edit-post-header *, 
+.edit-post-header :after, 
+.edit-post-header :before, 
+.edit-post-sidebar *, 
+.edit-post-sidebar :after, 
+.edit-post-sidebar :before, 
+.edit-post-text-editor *, 
+.edit-post-text-editor :after, 
+.edit-post-text-editor :before, 
+.edit-post-visual-editor *, 
+.edit-post-visual-editor :after, 
+.edit-post-visual-editor :before, 
+.editor-post-publish-panel *, 
+.editor-post-publish-panel :after, 
+.editor-post-publish-panel :before {
+	-webkit-box-sizing: border-box!important; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box!important;    /* Firefox, other Gecko */
+	box-sizing: border-box!important;         /* Opera/IE 8+ */	
+}
+
 .o-row,
 .o-block-grid {
 	display: flex;
@@ -13,13 +44,13 @@
 //    columns or block grid items if there aren't enough to fill a full row.
 //    E.g. if there are 2 block grid items in a row that is set to display 3
 //    across, the two block grid items will be centred regardless of the
-//    alignment class set (like flex-start).
+//    alignment class set (like flex-start). 
 .wp-block[data-type="pb/column"],
 .wp-block[data-type="pb/block-grid-item"] {
 	flex: 0 0 auto;
 	width: 100%;
 	margin-left: 0; // [1]
-	margin-right: 0; // [1]
+	margin-right: 0; // [1]	
 }
 
 .o-col,

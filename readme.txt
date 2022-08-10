@@ -3,7 +3,7 @@ Contributors: philbuchanan
 Author URI: https://philbuchanan.com/
 Tags: columns, block grid, gutenberg, block, responsive
 Requires at least: 5.9
-Tested up to: 5.9
+Tested up to: 6.0.1
 Stable tag: 5.9.0
 Requires PHP: 7.3
 License: GPLv2 or later
@@ -18,6 +18,9 @@ Gutenberg blocks for creating responsive grid rows, columns, and block grids.
 Gutenberg blocks is a plugin for creating advanced responsive grid rows, columns, and block grids. This plugin replaces the default Gutenberg Columns block.
 
 == Changelog ==
+
+= 6.0.1 =
+* Added: CSS declaraions for grid blocks to set box-sizing and allow wrapping when within editor. (WP 6.0 removed box-sizing from wp-admin/load-styles.php)
 
 = 5.9.0 =
 * Fixed: __experimentalUseInnerBlocksProps has been deprecated—now uses useInnerBlocksProps.save()
